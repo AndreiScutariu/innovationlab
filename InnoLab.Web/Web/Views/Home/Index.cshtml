@@ -1,0 +1,36 @@
+﻿<script src="~/Scripts/jquery.signalR-2.2.0.min.js"></script>
+<script src="~/Hubs/NotificationHub.js"></script>
+
+<script src="~/signalr/hubs"></script>
+
+<script>
+    $('document').ready(function () {
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "5000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+
+        var config = {
+            hubName: "notificationHub",
+            callback: function (message) {
+                toastr["info"](message);
+            },
+            callbackName: "onNewMessage"
+        };
+
+        var hub = new NotificationHub(config);
+    });
+</script>
