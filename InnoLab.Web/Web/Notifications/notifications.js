@@ -1,25 +1,8 @@
-﻿//if ('serviceWorker' in navigator) {
-//    console.log('Service Worker is supported');
-//    navigator.serviceWorker.register('/worker.js').then(function (reg) {
-//        console.log(reg);
-//        reg.pushManager.subscribe({
-//            userVisibleOnly: true
-//        }).then(function (sub) {
-//            var xhttp = new XMLHttpRequest();
-//            xhttp.open("GET", "/users/add?id=" + sub.endpoint, false);
-//            xhttp.send();
-//            console.log('endpoint:', sub.endpoint);
-//        });
-//    }).catch(function (err) {
-//        console.log(':^(', err);
-//    });
-//}
-
-
-var addSubscription = function (subscription) {
+﻿var addSubscription = function (subscription) {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "api/users/add?subscription=" + subscription, false);
+    xhttp.open("GET", "/users/add?id=" + subscription, false);
     xhttp.send();
+    console.log('endpoint:', subscription);
 };
 
 var subscribe = function () {
@@ -60,7 +43,6 @@ var initialiseState = function () {
               if (!subscription) {
                   return;
               }
-
               addSubscription(subscription.endpoint);
           })
           .catch(function (err) {

@@ -164,6 +164,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Bus\MassTransitBus.cs" />
     <Compile Include="Bus\Consumers\SomethingHappenedConsumer.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
