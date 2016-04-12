@@ -32,9 +32,9 @@ namespace Web.Controllers
             return id;
         }
 
-        public string Get()
+        public string Get(string userName)
         {
-            return "notification";
+            return userName;
         }
 
         public string Send()
