@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace Api
+namespace Api.Notifications
 {
     public static class WebApiConfig
     {

@@ -54,13 +54,13 @@ namespace Web.Controllers
             var byteArray = Encoding.UTF8.GetBytes(postData);
 
             request.ContentType = "application/json";
-            request.Headers.Add("Authorization", "key=AIzaSyAd03kWE-ZfrbMKmq-GBnfN6CkJK0cDr1g");
+            request.Headers.Add("Authorization", "key=AIzaSyAhHfZT-DquZbmhAiU1bBSkKXUAQXxEWhs");
 
             var dataStream = request.GetRequestStream();
             dataStream.Write(byteArray, 0, byteArray.Length);
             dataStream.Close();
 
-            request.GetResponse();
+            var response = request.GetResponse();
 
             return "done";
         }
