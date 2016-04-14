@@ -4,18 +4,18 @@ namespace Api.Notifications.Models
 {
     public class Event
     {
-        public Guid Id { get; set; }
+        public virtual Guid Id { get; set; }
 
-        public string UserName { get; set; }
+        public virtual string UserName { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
 
-        public string Desctription { get; set; }
+        public virtual string Desctription { get; set; }
 
-        public string LogoLocation { get; set; }
+        public virtual string LogoLocation { get; set; }
 
-        public string Link { get; set; }
+        public virtual string Link { get; set; }
 
-        public bool IsDispached { get; set; }
+        public virtual bool IsDispached { get; set; }
     }
 }

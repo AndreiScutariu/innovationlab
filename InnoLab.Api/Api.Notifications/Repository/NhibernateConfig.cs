@@ -1,5 +1,5 @@
-﻿using Api.Notifications.Dal.Convensions;
-using Api.Notifications.Models;
+﻿using Api.Notifications.Models;
+using Api.Notifications.Repository.Convensions;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
@@ -10,7 +10,7 @@ namespace Api.Notifications.Repository
 {
     public class NhibernateConfig
     {
-        private const string ConnectionString = @"Data Source=innovationlab.database.windows.net;User ID=innovationlab;Password=endava123!";
+        private const string ConnectionString = @"Data Source=innovationlab.database.windows.net;Initial Catalog=InnovationLab;User ID=innovationlab;Password=endava123!";
 
         private static ISession _session;
         private static ISessionFactory _sessionFactory;

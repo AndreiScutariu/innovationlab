@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Http;
+using Api.Notifications.Repository;
 
 namespace Api.Notifications.Controllers
 {
@@ -9,6 +10,7 @@ namespace Api.Notifications.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
+            var session = NhibernateConfig.OpenSession();
             return new[] { "value1", "value2" };
         }
 

@@ -2,7 +2,7 @@
 using FluentNHibernate;
 using FluentNHibernate.Conventions;
 
-namespace Api.Notifications.Dal.Convensions
+namespace Api.Notifications.Repository.Convensions
 {
     public class SsdForeignKeyConvention : ForeignKeyConvention
     {
